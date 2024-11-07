@@ -1,0 +1,13 @@
+<h1> LISTA DE JUGADORES: </h1>
+<ul>
+    @for (item of listaJugadores; track $index) {
+        <li> 
+            <h3> Nombre y Apellido: {{item.nombre}} {{item.apellido}} </h3>
+            <h3> Edad: {{item.edad}} </h3>
+            <h3> Posicion: {{item.posicion}} </h3>
+            <h3> Id: {{item.id}} </h3>
+            <button (click)="eliminarJugador(item.id)"> Eliminar Jugador </button>
+            <button [routerLink]="['/actualizar-jugador', item.id]"> Modificar Jugador</button>
+        </li>
+    }
+</ul>

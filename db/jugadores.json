@@ -1,0 +1,32 @@
+{
+  "jugadores": [
+    {
+      "nombre": "Luciano",
+      "apellido": "Gonzalez",
+      "edad": "19",
+      "posicion": "Enganche",
+      "id": "2e03"
+    },
+    {
+      "id": "e7d1",
+      "nombre": "Matteito",
+      "apellido": "Gonzalez",
+      "edad": "22",
+      "posicion": "Mediocampista"
+    },
+    {
+      "id": "7f37",
+      "nombre": "Lucianito",
+      "apellido": "Gonzalez",
+      "edad": "20",
+      "posicion": "delantero"
+    },
+    {
+      "id": "1e22",
+      "nombre": "Lucianito",
+      "apellido": "Gonzalez",
+      "edad": "20",
+      "posicion": "defensa"
+    }
+  ]
+}

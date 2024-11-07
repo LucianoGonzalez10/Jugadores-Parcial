@@ -1,0 +1,42 @@
+<form [formGroup]="formulario" (ngSubmit)="agregarJugador()">
+    <label for=""> Nombre: </label>
+    <input type="text" formControlName="nombre">
+    @if (formulario.controls['nombre'].getError('required') && formulario.controls['nombre'].touched) {
+        <p> El nombre es requerido. </p>
+    }
+
+    @if (formulario.controls['nombre'].getError('minLength') && formulario.controls['nombre'].touched) {
+        <p> El nombre debe tener un minimo de 3 caracteres. </p>
+    }
+
+    <label for=""> Apellido: </label>
+    <input type="text" formControlName="apellido">
+    @if (formulario.controls['apellido'].getError('required') && formulario.controls['apellido'].touched) {
+        <p> El apellido es requerido. </p>
+    }
+
+    @if (formulario.controls['apellido'].getError('minLength') && formulario.controls['apellido'].touched) {
+        <p> El apellido debe tener un minimo de 3 caracteres. </p>
+    }
+
+    <label for=""> Edad: </label>
+    <input type="text" formControlName="edad">
+    @if (formulario.controls['edad'].getError('required') && formulario.controls['edad'].touched) {
+        <p> La edad es requerida. </p>
+    }
+
+    <label for=""> Posicion: </label>
+    <select formControlName="posicion">
+        <option value="">Seleccione una posición</option>
+        <option value="delantero">Delantero</option>
+        <option value="centrocampista">Centrocampista</option>
+        <option value="defensa">Defensa</option>
+        <option value="portero">Portero</option>
+    </select> 
+
+    @if (formulario.controls['posicion'].getError('minLength') && formulario.controls['posicion'].touched) {
+        <p> La posicion debe tener un minimo de 3 caracteres. </p>
+    }
+
+    <button> Agregar Jugador </button>
+</form>
